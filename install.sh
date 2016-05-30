@@ -23,7 +23,7 @@ else
 fi
 
 echo '=============================================================='
-echo 'run "clean_map_setup" if this is a fresh mac installation'
+echo 'run "clean_mac_setup" if this is a fresh mac installation'
 echo '-OR-'
 echo 'run “list_all_installs” - to view setups/installations available'
 echo '=============================================================='

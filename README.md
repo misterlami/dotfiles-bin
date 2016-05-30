@@ -45,7 +45,7 @@ Following these steps will make your iTerm look identical to mine in the screens
 2. setup [cmd + right] to skip word righ: *iTerm Preferences > Keys > Global Shortcut Keys > change [cmd + right] action to [esc + f]
 3. Turn off long tab titles: *iTerm Preferences > Appearance > Windows & Tab Titles > uncheck them all*
 4. Unbold font: *iTerm Preferences > Profiles > Default > Text > Text Rendering > uncheck "Draw bold text in bold font"*
-5. Lighter blue for the directory highlighting: *iTerm Preferences > Profiles > Default > Colors > Load Presets > Pastel (Dark Background)
+5. Pick a nice iterm theme: *iTerm Preferences > Profiles > Default > Colors > Load Presets > Pastel (Dark Background)
 
 ### Installation: Fresh Mac Setup
 Run ```clean_mac_setup``` from command-line.
@@ -81,5 +81,4 @@ Run individual install commands
 - [cask.sh](https://github.com/mrlami/dotFiles/blob/master/installs/cask.sh)
 
 ####Prezto Steeef Theme Setting (pet peeve)
-- In file below, join line 89 with 88 to prevent additional space on top of terminal with steeef theme
-  ~/.zprezto/modules/prompt/functions/prompt_steeef_setup
+- join lines 88 and 89 (on file ~/.zprezto/modules/prompt/functions/prompt_steeef_setup) to prevent additional space on top of terminal with steeef theme

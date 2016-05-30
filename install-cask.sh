@@ -50,7 +50,7 @@ brew cask install macdown
 # cloud & web apps
 brew cask install bittorrent-sync
 brew cask install dropbox
-brew cask install google-chrome google-chrome-canary
+brew cask install google-chrome-canary google-chrome
 brew cask install google-drive
 brew cask install transmission
 brew cask install vivaldi
@@ -75,7 +75,7 @@ brew cask install mysqlworkbench
 brew cask install transmit
 
 # dev tools
-brew cask install codekit
+brew cask install code
 brew cask install coderunner
 brew cask install dash
 brew cask install kaleidoscope
@@ -89,3 +89,4 @@ brew cask install sublime-text3
 
 brew cask cleanup
 defaults write com.runningwithcrayons.Alfred-Preferences dropbox.allowappsfolder -bool TRUE
+defaults write com.runningwithcrayons.Alfred-Preferences-3 dropbox.allowappsfolder -bool TRUE
