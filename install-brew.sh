@@ -43,7 +43,7 @@ brew install rethinkdb
 brew install redis
 
 brew install php70 php70-mcrypt
-brew install codeception psysh
+brew install codeception psysh php-cs-fixer
 
 
 brew cleanup

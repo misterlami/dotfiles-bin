@@ -21,8 +21,7 @@ alias hbin="cd ~/_bin"
 alias hssh="cd ~/_ssh"
 alias d="cd ~/Downloads"
 alias a="cd ~/apps"
-alias code="cd ~/apps/_code"
-alias dl="cd ~/apps/_code/logiq-one"
+alias dl="cd ~/apps/logiq-one"
 alias mx="cd ~/apps/munetrix"
 alias sg="cd ~/apps/scigames"
 
@@ -41,10 +40,6 @@ alias renamelower='for f in *; do mv "$f" "`echo $f | tr "[:upper:]" "[:lower:]"
 alias renameupper='for f in *; do mv "$f" "`echo $f | tr "[:lower:]" "[:upper:]"`"; done'
 alias serve="php -S localhost:8000" # use -t to specify different doc root
 alias subl='open -a "Sublime Text"'
-alias vscode='open -a "Visual Studio Code"'
-alias startmaria='mysql.server start'
-alias startpostgres='postgres -D /usr/local/var/postgres'
-alias startredis='redis-server /usr/local/etc/redis.conf'
 alias updatehosts="sudo bash -c 'cat ~/_ssh/hosts > /private/etc/hosts'"
 
 alias aliases="c ~/_bin/dot-common/aliases.sh"

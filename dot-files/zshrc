@@ -12,3 +12,5 @@ source ~/_bin/dot-common/z.sh
 
 # additional zsh auto-completions from homebrew
 fpath=(/usr/local/share/zsh-completions $fpath)
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"

@@ -22,5 +22,6 @@ bower_components
 vssver2.scc
 
 # misc apps / others
+.idea
 .sass-cache
 .vagrant

@@ -183,15 +183,14 @@ function install_node_apps() {
     nvm alias default node
 
     #install node apps
-    npm install -g pnpm speed-test trash-cli empty-trash-cli
+    npm install -g speed-test trash-cli empty-trash-cli
     npm install -g bower grunt-cli gulp yo
     npm install -g adonis-cli pm2
-    npm install -g mklicense
+    npm install -g csslint jshint sass-lint
 }
 
 function install_php_apps() {
     composer global require "hirak/prestissimo" #parallel install plugin (speeds up composer)
-    composer global require "fabpot/php-cs-fixer"
 
     composer global require "laravel/installer"
     composer global require "laravel/envoy=~1.0"
@@ -451,8 +450,15 @@ function sgclone() {
 #request a review
 function sgreview() {
     if [ -z "$1" ]; then
-        rbt post --username mrlami -o -g -X '*.ico' -X '*.gif' -X '*.png' -X '*.jpg' -X '*.map' -X '*.min.js' -X '*.min.css' -X '*/app/*.php' -X '*/fonts/*'
+        rbt post --username mrlami -o -g -X '*.ico' -X '*.gif' -X '*.png' -X '*.jpg' -X '*.map' -X '*.min.js' -X '*.min.css' -X '*/app/*.php' -X '*/fonts/*' -X '*/images/*' -X '*/tests/*' -X '*/docs/*' -X '*/vendor/*' -X '*.env'
     else
-        rbt post -r $1 -o -g -X '*.png' -X '*.ico' -X '*.gif' -X '*.png' -X '*.jpg' -X '*.map' -X '*.min.js' -X '*.min.css' -X '*/app/*.php' -X '*/fonts/*'
+        rbt post -r $1 -o -g -X '*.ico' -X '*.gif' -X '*.png' -X '*.jpg' -X '*.map' -X '*.min.js' -X '*.min.css' -X '*/app/*.php' -X '*/fonts/*' -X '*/images/*' -X '*/tests/*' -X '*/docs/*' -X '*/vendor/*' -X '*.env'
+    fi
+}
+function sgreview2() {
+    if [ -z "$1" ]; then
+        rbt post --username mrlami -o -g -X '*.ico' -X '*.gif' -X '*.png' -X '*.jpg' -X '*.map' -X '*.min.js' -X '*.min.css' -X '*/fonts/*' -X '*/images/*' -X '*/tests/*' -X '*/docs/*' -X '*/vendor/*' -X '*.env'
+    else
+        rbt post -r $1 -o -g -X '*.ico' -X '*.gif' -X '*.png' -X '*.jpg' -X '*.map' -X '*.min.js' -X '*.min.css' -X '*/fonts/*' -X '*/images/*' -X '*/tests/*' -X '*/docs/*' -X '*/vendor/*' -X '*.env'
     fi
 }
