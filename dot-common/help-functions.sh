@@ -25,7 +25,12 @@ function enter() {
     cd $1
 }
 
-function recursively_delete_files_ending_with() {
+function copy_ssh_key() {
+    #where $1 is something like root@ip-address or lami@hostname
+    cat ~/.ssh/id_rsa.pub | ssh $1 "mkdir -p ~/.ssh && cat >>  ~/.ssh/authorized_keys"
+}
+
+function delete_files_ending_with() {
     find . -name "*$1" -type f -delete
 }
 
