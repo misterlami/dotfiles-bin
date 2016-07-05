@@ -30,6 +30,7 @@ brew install bash
 brew install zsh
 brew install zsh-completions
 
+brew install awscli
 brew install mycli
 brew install pgcli
 

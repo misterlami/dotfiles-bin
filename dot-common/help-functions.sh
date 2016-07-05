@@ -114,7 +114,7 @@ function clean_mac_setup() {
     install_default_cask_apps
 
     # pygments, prezto, tmuxifier, etc.
-    install_pygments
+    install_pygments && install_glances
     install_prezto
     install_tmuxifier
     install_hushlogin
@@ -252,6 +252,11 @@ function install_pygments() {
         echo "Installing Pygments..."
         sudo easy_install Pygments
     fi
+}
+
+function install_glances() {
+    echo "Installing Glances..."
+    pip install glances
 }
 
 function install_vimrc_ultimate() {

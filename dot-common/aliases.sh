@@ -76,7 +76,6 @@ alias gpl='git pull'
 alias gcl='git clone'
 alias gco='git checkout'
 alias gpspring='gp spring && gp'
-alias gpall='gp && gp spring && gp github'
 
 # Vagrant
 alias v='vagrant'
