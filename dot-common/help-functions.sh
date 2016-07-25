@@ -457,7 +457,7 @@ function sgclone() {
     git clone ssh://l_adabonyan@172.30.204.246:29418/SCBZ/$1.git $2
 }
 
-#request a review
+#request review (ignore app folder)
 function sgreview() {
     if [ -z "$1" ]; then
         rbt post --username mrlami -o -g -X '*.ico' -X '*.gif' -X '*.png' -X '*.jpg' -X '*.map' -X '*.min.js' -X '*.min.css' -X '*/app/*.php' -X '*/fonts/*' -X '*/images/*' -X '*/tests/*' -X '*/docs/*' -X '*/vendor/*' -X '*.env'
@@ -465,10 +465,72 @@ function sgreview() {
         rbt post -r $1 -o -g -X '*.ico' -X '*.gif' -X '*.png' -X '*.jpg' -X '*.map' -X '*.min.js' -X '*.min.css' -X '*/app/*.php' -X '*/fonts/*' -X '*/images/*' -X '*/tests/*' -X '*/docs/*' -X '*/vendor/*' -X '*.env'
     fi
 }
+
+#request review (include app folder)
 function sgreview2() {
     if [ -z "$1" ]; then
         rbt post --username mrlami -o -g -X '*.ico' -X '*.gif' -X '*.png' -X '*.jpg' -X '*.map' -X '*.min.js' -X '*.min.css' -X '*/fonts/*' -X '*/images/*' -X '*/tests/*' -X '*/docs/*' -X '*/vendor/*' -X '*.env'
     else
         rbt post -r $1 -o -g -X '*.ico' -X '*.gif' -X '*.png' -X '*.jpg' -X '*.map' -X '*.min.js' -X '*.min.css' -X '*/fonts/*' -X '*/images/*' -X '*/tests/*' -X '*/docs/*' -X '*/vendor/*' -X '*.env'
     fi
+}
+
+#start a jenkins build
+function sgbuild() {
+    # $1 - delete flag
+
+    local JENKINS="192.168.175.209"
+    local URL="http://$JENKINS:8080/job/SCBZ_PROTOTYPE/buildWithParameters"
+
+    ping -q -W 1 -c 1 $JENKINS &> /dev/null || $connectiontest="false"
+    if [ "$connectiontest" == "false" ]; then
+        echo " "
+        echo " ****** WARNING ******"
+        echo " Could not establish connection to JENKINS @ $JENKINS"
+        echo " Are you connected to the VPN?"
+        echo " "
+        return
+    fi
+
+    local GIT_REPO=$(basename "$(git rev-parse --show-toplevel)")
+    local GIT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
+
+    local build_path=$(pwd) #get current directory path
+    local repo_path=$(git rev-parse --show-toplevel) #get path up to repo directory
+    local current_dir=${PWD##*/} #get the directory we are in
+
+    local COPY_SRC=${build_path#$repo_path/} #split path by git repo name (add extra slash to repo_path)
+    local COPY_DEST=${COPY_SRC//\/$current_dir/ } #remove the current directory from our copy path
+
+    # set delete flag to false if no parameter was passed when calling function
+    if [ -z "$1" ]; then
+        DELETE_FLAG='FALSE'
+    else
+        DELETE_FLAG='TRUE'
+    fi
+
+    # warn user if the current directory is htdocs
+    # which means overwriting all of htdocs on UAT
+    if [ "$currentdir" == "htdocs" ] || [ "$currentdir" == "live" ]; then
+        echo " "
+        echo " ****** WARNING ******"
+        echo "You are attempting to overwrite all subdirectires of $currentdir on $GIT_REPO!"
+        echo "This might affect other people's work."
+        echo "Do you want to continue? (1 | 2)"
+        select yn in "Yes" "No"; do
+            case $yn in
+                Yes ) break;;
+                No ) exit;;
+            esac
+        done
+    fi
+
+    local CURL_DATA="GIT_REPO=$GIT_REPO&GIT_BRANCH=$GIT_BRANCH&COPY_SRC=$COPY_SRC&COPY_DEST=$COPY_DEST&DELETE_FLAG=$DELETE_FLAG";
+    curl --data "$CURL_DATA" $URL;
+
+    echo "*********************************"
+    echo "Build parameters sent to JENKINS:"
+    echo "url » $URL"
+    echo "parameters » $CURL_DATA"
+    echo "*********************************"
 }
