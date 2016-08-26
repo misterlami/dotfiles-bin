@@ -65,7 +65,6 @@ brew cask install vivaldi
 brew cask install vmware-fusion
 brew cask install virtualbox
 brew cask install vagrant
-brew cask install vagrant-manager
 
 brew cask install cornerstone
 brew cask install tower

@@ -1,19 +1,15 @@
 ## aliases ##
 
-# Color ls
-colorflag="-G"
-alias ls="ls ${colorflag}"
-alias la="ls -A ${colorflag}" # all files inc dotfiles
-alias l="ls -lF ${colorflag}" # all files, in long format
-alias ll="ls -laF ${colorflag}" # all files inc dotfiles, in long format
-alias lsd='ls -lF | grep "^d"' # only directories
-alias llsd='ls -laF | grep "^d"' # only directories inc dotfiles
+# Color ls - "-G" enables colors flag
+alias l="ls -lF -G" # all files, in long format
+alias ll="ls -laF -G" # all files inc dotfiles, in long format
+alias ld="ls -lF -G | grep '^d'" # only directories
+alias lld="ls -laF -G | grep '^d'" # only directories inc dotfiles
 
 # Quicker navigation
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
-alias .....="cd ../../../.."
 
 # Shortcuts to folders
 alias h="cd ~/"
@@ -33,7 +29,7 @@ alias cl="clear"
 alias clearcache="sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder;say cache flushed"
 alias cpd="cp -aR" #copy directory
 alias p="ping -c 5"
-alias psh="psysh"
+alias psy="psysh"
 alias rmd="rm -rf" #delete directory
 alias rdel="recursively_delete_files_ending_with"
 alias renamelower='for f in *; do mv "$f" "`echo $f | tr "[:upper:]" "[:lower:]"`"; done'
@@ -80,11 +76,12 @@ alias gpspring='gp spring && gp'
 # Vagrant
 alias v='vagrant'
 alias vs='vagrant status'
-alias vu='vagrant up --provider virtualbox'
+alias vu='vagrant up'
 alias vd='vagrant destroy -f'
 alias vh='vagrant halt'
 alias vsh='vagrant ssh'
 alias vg='vagrant global-status'
+alias vgp='vg --prune'
 
 # Homebrew & Cask
 alias b='brew'

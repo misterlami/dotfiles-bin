@@ -13,6 +13,7 @@ ln -sf ~/_bin/dot-files/gitignore ~/.gitignore #gitignore
 ln -sf ~/_bin/dot-files/.git_template ~/.git_template #template dir (for git hooks)
 ln -sf ~/_bin/dot-files/nanorc ~/.nanorc #nano
 ln -sf ~/_bin/dot-files/tmux.conf ~/.tmux.conf #tmux
+ln -sf ~/_bin/dot-files/sass-lint.yml ~/.sass-lint.yml #sass-linter
 
 # source rc file
 echo "Sourcing aliased dotfiles..."

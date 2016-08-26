@@ -191,7 +191,7 @@ function install_node_apps() {
     npm install -g speed-test trash-cli empty-trash-cli
     npm install -g bower grunt-cli gulp yo
     npm install -g adonis-cli pm2
-    npm install -g csslint jshint sass-lint
+    npm install -g browser-sync csslint jshint sass-lint
 }
 
 function install_php_apps() {
@@ -457,24 +457,6 @@ function sgclone() {
     git clone ssh://l_adabonyan@172.30.204.246:29418/SCBZ/$1.git $2
 }
 
-#request review (ignore app folder)
-function sgreview() {
-    if [ -z "$1" ]; then
-        rbt post --username mrlami -o -g -X '*.ico' -X '*.gif' -X '*.png' -X '*.jpg' -X '*.map' -X '*.min.js' -X '*.min.css' -X '*/app/*.php' -X '*/fonts/*' -X '*/images/*' -X '*/tests/*' -X '*/docs/*' -X '*/vendor/*' -X '*.env'
-    else
-        rbt post -r $1 -o -g -X '*.ico' -X '*.gif' -X '*.png' -X '*.jpg' -X '*.map' -X '*.min.js' -X '*.min.css' -X '*/app/*.php' -X '*/fonts/*' -X '*/images/*' -X '*/tests/*' -X '*/docs/*' -X '*/vendor/*' -X '*.env'
-    fi
-}
-
-#request review (include app folder)
-function sgreview2() {
-    if [ -z "$1" ]; then
-        rbt post --username mrlami -o -g -X '*.ico' -X '*.gif' -X '*.png' -X '*.jpg' -X '*.map' -X '*.min.js' -X '*.min.css' -X '*/fonts/*' -X '*/images/*' -X '*/tests/*' -X '*/docs/*' -X '*/vendor/*' -X '*.env'
-    else
-        rbt post -r $1 -o -g -X '*.ico' -X '*.gif' -X '*.png' -X '*.jpg' -X '*.map' -X '*.min.js' -X '*.min.css' -X '*/fonts/*' -X '*/images/*' -X '*/tests/*' -X '*/docs/*' -X '*/vendor/*' -X '*.env'
-    fi
-}
-
 #start a jenkins build
 function sgbuild() {
     # $1 - delete flag
@@ -533,4 +515,22 @@ function sgbuild() {
     echo "url » $URL"
     echo "parameters » $CURL_DATA"
     echo "*********************************"
+}
+
+#request review (ignore app folder)
+function sgreview() {
+    if [ -z "$1" ]; then
+        rbt post --username mrlami -o -g -X '*.ico' -X '*.gif' -X '*.png' -X '*.jpg' -X '*.map' -X '*.min.js' -X '*.min.css' -X '*/app/*.php' -X '*/fonts/*' -X '*/images/*' -X '*/tests/*' -X '*/docs/*' -X '*/vendor/*' -X '*.env'
+    else
+        rbt post -r $1 -o -g -X '*.ico' -X '*.gif' -X '*.png' -X '*.jpg' -X '*.map' -X '*.min.js' -X '*.min.css' -X '*/app/*.php' -X '*/fonts/*' -X '*/images/*' -X '*/tests/*' -X '*/docs/*' -X '*/vendor/*' -X '*.env'
+    fi
+}
+
+#request review (include app folder)
+function sgreview2() {
+    if [ -z "$1" ]; then
+        rbt post --username mrlami -o -g -X '*.ico' -X '*.gif' -X '*.png' -X '*.jpg' -X '*.map' -X '*.min.js' -X '*.min.css' -X '*/fonts/*' -X '*/images/*' -X '*/tests/*' -X '*/docs/*' -X '*/vendor/*' -X '*.env'
+    else
+        rbt post -r $1 -o -g -X '*.ico' -X '*.gif' -X '*.png' -X '*.jpg' -X '*.map' -X '*.min.js' -X '*.min.css' -X '*/fonts/*' -X '*/images/*' -X '*/tests/*' -X '*/docs/*' -X '*/vendor/*' -X '*.env'
+    fi
 }
