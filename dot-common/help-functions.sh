@@ -191,7 +191,7 @@ function install_node_apps() {
     npm install -g speed-test trash-cli empty-trash-cli
     npm install -g bower grunt-cli gulp yo
     npm install -g adonis-cli pm2
-    npm install -g browser-sync csslint jshint sass-lint
+    npm install -g browser-sync csslint eslint jshint sass-lint
 }
 
 function install_php_apps() {
@@ -241,8 +241,9 @@ function uninstall_prezto() {
 }
 
 function update_prezto() {
-    cd ~/.prezto
+    cd ~/.zprezto
     git pull && git submodule update --init --recursive
+    cd ~/Downloads
 }
 
 function install_hushlogin() {
@@ -505,6 +506,15 @@ function sgbuild() {
                 No ) exit;;
             esac
         done
+    fi
+
+    # test for single file update and only post that file
+    # instead of the whole directory
+    filecount=$(git diff HEAD~1 --name-only | wc -l)
+    if [ "$filecount" -lt "2" ]; then
+        COPY_SRC=$(git diff HEAD~1 --name-only)
+        filename=$(echo "$COPY_SRC" | rev | cut -d/ -f1 | rev)
+        COPY_DEST=${COPY_SRC%$filename}
     fi
 
     local CURL_DATA="GIT_REPO=$GIT_REPO&GIT_BRANCH=$GIT_BRANCH&COPY_SRC=$COPY_SRC&COPY_DEST=$COPY_DEST&DELETE_FLAG=$DELETE_FLAG";

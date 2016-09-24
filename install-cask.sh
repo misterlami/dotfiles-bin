@@ -48,12 +48,11 @@ brew cask install vlc
 brew cask install macdown
 
 # cloud & web apps
-brew cask install bittorrent-sync
+brew cask install resilio-sync
 brew cask install dropbox
-brew cask install google-chrome-canary google-chrome
+brew cask install google-chrome
 brew cask install google-drive
 brew cask install transmission
-brew cask install vivaldi
 
 # communication tools
 #brew cask install hipchat
@@ -83,7 +82,7 @@ brew cask install postman
 brew cask install rbtools
 
 brew cask install sketch
-brew cask install sublime-text3
+brew cask install sublime-text
 
 
 brew cask cleanup

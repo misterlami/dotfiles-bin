@@ -25,3 +25,4 @@ vssver2.scc
 .idea
 .sass-cache
 .vagrant
+.vscode

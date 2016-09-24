@@ -13,18 +13,20 @@ zstyle ':prezto:load' pmodule \
   'spectrum' \
   'utility' \
   'completion' \
-  'history-substring-search' \
   'git' \
   'node' \
   'osx' \
+  'rsync' \
   'syntax-highlighting' \
-  'wakeonlan' \
+  'history-substring-search' \
   'prompt'
 
-# Set the key mapping style to 'emacs' or 'vi'.
+# terminal settings
+zstyle ':prezto:module:terminal:tab-title' format '%m: %s'
+
+# editor settings
 zstyle ':prezto:module:editor' key-bindings 'emacs'
+zstyle ':prezto:module:editor' dot-expansion 'yes'
 
-# Set the prompt theme to load.
-# Setting it to 'random' loads a random theme.
+# prompt settings - set to 'random' to load random themes
 zstyle ':prezto:module:prompt' theme 'steeef'  # steeef / paradox
-
