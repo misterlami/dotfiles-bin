@@ -8,7 +8,6 @@ brew cask doctor
 
 
 #fonts
-brew cask install font-blokk.rb
 brew cask install font-fira-code.rb font-fira-sans.rb font-fira-mono.rb font-fira-mono-for-powerline.rb
 brew cask install font-nexa
 brew cask install font-open-sans.rb font-open-sans-condensed.rb

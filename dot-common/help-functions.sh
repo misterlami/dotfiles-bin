@@ -485,6 +485,24 @@ function sgbuild() {
     local COPY_SRC=${build_path#$repo_path/} #split path by git repo name (add extra slash to repo_path)
     local COPY_DEST=${COPY_SRC//\/$current_dir/ } #remove the current directory from our copy path
 
+    ## DEBUG (start)
+    # echo "GIT_REPO: $GIT_REPO"
+    # echo "build_path: $build_path"
+    # echo "repo_path: $repo_path"
+    # echo "current_dir: $current_dir"
+    # echo "COPY_SRC: $COPY_SRC"
+    # echo "COPY_DEST: $COPY_DEST"
+    ## DEBUG (end)
+
+    # hacks for api deploy (because it usually is done from root level or two levels from root)
+    # *TODO* think of a better way to handle this scenario
+    if [ "$GIT_REPO" == "scbz-api" ]; then
+        if [ "$current_dir" == "scbz-api" ] || [ "$current_dir" == "api" ]; then
+            COPY_SRC="api"
+            COPY_DEST=""
+        fi
+    fi
+
     # set delete flag to false if no parameter was passed when calling function
     if [ -z "$1" ]; then
         DELETE_FLAG='FALSE'

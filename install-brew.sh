@@ -38,7 +38,7 @@ brew install go
 brew install nvm
 brew install composer
 
-brew install mariadb
+brew install mysql
 brew install postgresql
 brew install rethinkdb
 brew install redis
