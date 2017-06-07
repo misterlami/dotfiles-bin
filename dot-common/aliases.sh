@@ -64,9 +64,10 @@ alias art='php artisan'
 alias g='git'
 alias gs='git status -sb'
 alias gs2='git diff --name-status master..$(git rev-parse --abbrev-ref HEAD)' #diff current branch with master
-alias gl='git log --oneline --decorate --graph' #-5 --author mrlami --before "Sat Aug 30 2014"
-alias gl2='git shortlog -s -n -e' #-s squash commit msgs into the # of commits, -n sorts the list by # of commits, -e append emails
-alias gl3="git log --graph -10 --branches --remotes --tags  --format=format:'%Cgreen%h %Creset• %<(75,trunc)%s (%cN, %cr) %Cred%d' --date-order" #whos been working on last 10 commits (basically who's working on what now)
+alias gl='git log --oneline --decorate --graph' #-5 (show commit messages)
+alias gl2='git log --oneline --decorate --graph --name-only' #-5 (show commit messages and files changed)
+alias gl3='git shortlog -s -n -e' #show total number of commits for each user
+alias gl4="git log --graph -10 --branches --remotes --tags  --format=format:'%Cgreen%h %Creset• %<(75,trunc)%s (%cN, %cr) %Cred%d' --date-order" #whos been working on last 10 commits (basically who's working on what now)
 alias ga='git add --all'
 alias gc='git commit -m'
 alias gc2='git commit -m --amend'
@@ -75,6 +76,7 @@ alias gpl='git pull'
 alias gcl='git clone'
 alias gco='git checkout'
 alias gpspring='gp spring && gp'
+alias grh='g reset --hard origin/master'
 
 # Vagrant
 alias v='vagrant'

@@ -189,7 +189,7 @@ function install_node_apps() {
 
     #install node apps
     npm install -g speed-test trash-cli empty-trash-cli
-    npm install -g bower grunt-cli gulp yo
+    npm install -g bower grunt-cli gulp yarn
     npm install -g adonis-cli pm2
     npm install -g browser-sync csslint eslint jshint sass-lint
 }

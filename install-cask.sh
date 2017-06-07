@@ -22,7 +22,7 @@ brew cask install itsycal
 brew cask install atext
 brew cask install alfred
 brew cask install moom
-brew cask install xtrafinder #totalfinder
+brew cask install totalfinder
 
 brew cask install iterm2
 brew cask install keka
