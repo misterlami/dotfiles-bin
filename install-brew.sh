@@ -19,6 +19,7 @@ brew install gawk
 brew install git
 brew install httpie
 brew install imagemagick
+brew install jq #formats json output on command prompt
 brew install nano
 brew install openssl
 brew install tmux
@@ -31,6 +32,7 @@ brew install zsh
 brew install zsh-completions
 
 brew install awscli
+brew cask install google-cloud-sdk
 brew install mycli
 brew install pgcli
 

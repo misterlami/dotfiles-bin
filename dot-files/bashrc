@@ -7,4 +7,4 @@ source ~/_bin/dot-common/help-functions.sh
 # init z - https://github.com/rupa/z
 source ~/_bin/dot-common/z.sh
 
-test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
+#test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"

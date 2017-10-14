@@ -104,3 +104,4 @@ alias bcun='brew cask uninstall'
 export PATH="$HOME/.composer/vendor/bin:$PATH"
 #export PATH="$(brew --prefix homebrew/php/php70)/bin:$PATH"
 export NVM_DIR=~/.nvm && source $(brew --prefix nvm)/nvm.sh
+export DOTNET_CLI_TELEMETRY_OPTOUT=1
