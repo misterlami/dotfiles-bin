@@ -40,10 +40,10 @@ brew install go
 brew install nvm
 brew install composer
 
-brew install mysql
-brew install postgresql
-brew install rethinkdb
-brew install redis
+# brew install mysql
+# brew install postgresql
+# brew install rethinkdb
+# brew install redis
 
 brew install php70 php70-mcrypt
 brew install codeception psysh php-cs-fixer tidy-html5

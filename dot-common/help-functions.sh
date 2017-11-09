@@ -83,22 +83,14 @@ function mac() {
 function bar() {
     osascript -e 'quit app "Bartender 2"'
 
-    if [ -z "$1" ] || [ "$1" = "default" ]; then
+    if [ -z "$1" ] || [ "$1" = "default" ] || [ "$1" = "time" ]; then
         ln -sf ~/Dropbox/Apps/Bartender/com.surteesstudios.Bartender.plist ~/Library/Preferences/com.surteesstudios.Bartender.plist
         defaults read com.surteesstudios.Bartender
-        echo "✓ loaded **default** bartendar settings"
+        echo "✓ loaded **default** bartendar settings (shows maily time functions)"
     elif [ "$1" = "clear" ] || [ "$1" = "screencast" ]; then
         ln -sf ~/Dropbox/Apps/Bartender/com.surteesstudios.Bartender.clear.plist ~/Library/Preferences/com.surteesstudios.Bartender.plist
         defaults read com.surteesstudios.Bartender
         echo "✓ loaded **clear / screencast** bartendar settings"
-    elif [ "$1" = "time" ]; then
-        ln -sf ~/Dropbox/Apps/Bartender/com.surteesstudios.Bartender.time.plist ~/Library/Preferences/com.surteesstudios.Bartender.plist
-        defaults read com.surteesstudios.Bartender
-        echo "✓ loaded **time** bartendar settings"
-    elif [ "$1" = "pomo" ]; then
-        ln -sf ~/Dropbox/Apps/Bartender/com.surteesstudios.Bartender.pomo.plist ~/Library/Preferences/com.surteesstudios.Bartender.plist
-        defaults read com.surteesstudios.Bartender
-        echo "✓ loaded **time** bartendar settings"
     elif [ "$1" = "all" ]; then
         ln -sf ~/Dropbox/Apps/Bartender/com.surteesstudios.Bartender.all.plist ~/Library/Preferences/com.surteesstudios.Bartender.plist
         defaults read com.surteesstudios.Bartender
