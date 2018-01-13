@@ -1,9 +1,9 @@
 [user]
 	name = mrlami
-	email = lami@inbox.com
+	email = misterlami@gmail.com
 [core]
 	# Use custom `.gitignore`
-	excludesfile = /Users/mrlami/.gitignore
+	excludesfile = ~/.gitignore
 	# Treat spaces before tabs, lines that are indented with 8 or more spaces, and all kinds of trailing whitespace as an error
 	whitespace = space-before-tab,indent-with-non-tab,trailing-space
 	# Use Sublime Text as default editor
