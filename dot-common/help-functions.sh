@@ -30,7 +30,7 @@ function copy_ssh_key() {
     cat ~/.ssh/id_rsa.pub | ssh $1 "mkdir -p ~/.ssh && cat >>  ~/.ssh/authorized_keys"
 }
 
-function delete_files_ending_with() {
+function recursively_delete_files_ending_with() {
     find . -name "*$1" -type f -delete
 }
 
@@ -111,7 +111,7 @@ function clean_mac_setup() {
     install_default_cask_apps
 
     # pygments, prezto, tmuxifier, etc.
-    install_pygments && install_glances
+    install_pygments
     install_prezto
     install_tmuxifier
     install_hushlogin
@@ -250,11 +250,6 @@ function install_pygments() {
         echo "Installing Pygments..."
         sudo easy_install Pygments
     fi
-}
-
-function install_glances() {
-    echo "Installing Glances..."
-    pip install glances
 }
 
 function install_vimrc_ultimate() {
