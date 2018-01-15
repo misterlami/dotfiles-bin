@@ -205,39 +205,6 @@ function update_tmuxifier() {
     git pull
 }
 
-function install_prezto() {
-    echo '»» installing prezto...'
-    uninstall_prezto
-    git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
-
-    # setopt EXTENDED_GLOB
-    # for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
-    #     ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
-    # done
-
-    for f in ~/.zprezto/runcoms/*; do
-        if [ "${f##*/}" != "README.md" ]; then
-            ln -sf $f ~/.${f##*/}
-        fi
-    done
-
-    echo '»» mapping zpreztorc & zshrc dotfiles...'
-    ln -sf ~/_bin/dot-files/zpreztorc ~/.zpreztorc
-    ln -sf ~/_bin/dot-files/zshrc ~/.zshrc
-    source ~/.zshrc
-}
-
-function uninstall_prezto() {
-    rm -rf ~/.zprezto
-    rm -f ~/.zlogin ~/.zlogout ~/.zpreztorc ~/.zprofile ~/.zshenv
-}
-
-function update_prezto() {
-    cd ~/.zprezto
-    git pull && git submodule update --init --recursive
-    cd ~/Downloads
-}
-
 function install_hushlogin() {
     touch ~/.hushlogin
     echo "# This file prevents the shell login message from appearing" >> ~/.hushlogin

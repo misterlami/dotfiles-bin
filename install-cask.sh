@@ -8,10 +8,10 @@ brew cask doctor
 
 
 #fonts
-brew cask install font-fira-code.rb font-fira-sans.rb font-fira-mono.rb font-fira-mono-for-powerline.rb
+brew cask install font-fira-code font-fira-sans font-fira-mono font-fira-mono-for-powerline
 brew cask install font-nexa
-brew cask install font-open-sans.rb font-open-sans-condensed.rb
-brew cask install font-source-code-pro.rb font-source-code-pro-for-powerline
+brew cask install font-open-sans font-open-sans-condensed
+brew cask install font-source-code-pro font-source-code-pro-for-powerline
 
 
 # utility apps
@@ -19,10 +19,10 @@ brew cask install bartender
 brew cask install caffeine
 brew cask install itsycal
 
-brew cask install atext
-brew cask install alfred
+#brew cask install atext
+#brew cask install alfred
 brew cask install moom
-brew cask install totalfinder
+#brew cask install totalfinder
 
 brew cask install iterm2
 brew cask install keka
@@ -48,9 +48,9 @@ brew cask install macdown
 
 # cloud & web apps
 brew cask install resilio-sync
-brew cask install dropbox
-brew cask install google-chrome
-brew cask install google-drive
+#brew cask install dropbox
+#brew cask install google-chrome
+#brew cask install google-drive
 brew cask install transmission
 
 # communication tools
@@ -64,24 +64,24 @@ brew cask install vmware-fusion
 brew cask install virtualbox
 brew cask install vagrant
 
-brew cask install cornerstone
-brew cask install tower
+#brew cask install cornerstone
+#brew cask install tower
 
-brew cask install navicat-premium
-brew cask install mysqlworkbench
-brew cask install transmit
+# brew cask install navicat-premium
+# brew cask install mysqlworkbench
+# brew cask install transmit
 
 # dev tools
-brew cask install code
+# brew cask install code
 brew cask install coderunner
 brew cask install dash
 brew cask install kaleidoscope
 brew cask install ngrok
 brew cask install postman
-brew cask install rbtools
+#brew cask install rbtools
 
-brew cask install sketch
-brew cask install sublime-text
+#brew cask install sketch
+#brew cask install sublime-text
 
 
 brew cask cleanup

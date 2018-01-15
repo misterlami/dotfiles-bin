@@ -7,13 +7,9 @@ sudo -v
 echo "Aliasing dotfiles..."
 ln -sf ~/_bin/dot-files/bashrc ~/.bashrc #bash
 ln -sf ~/_bin/dot-files/bash_profile ~/.bash_profile #bash
-ln -sf ~/_bin/dot-files/zshrc ~/.zshrc #zsh
 ln -sf ~/_bin/dot-files/gitconfig ~/.gitconfig #git
 ln -sf ~/_bin/dot-files/gitignore ~/.gitignore #gitignore
-ln -sf ~/_bin/dot-files/.git_template ~/.git_template #template dir (for git hooks)
 ln -sf ~/_bin/dot-files/nanorc ~/.nanorc #nano
-ln -sf ~/_bin/dot-files/tmux.conf ~/.tmux.conf #tmux
-ln -sf ~/_bin/dot-files/sass-lint.yml ~/.sass-lint.yml #sass-linter
 
 # source rc file
 echo "Sourcing aliased dotfiles..."

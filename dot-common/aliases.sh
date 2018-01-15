@@ -46,9 +46,8 @@ alias functionz="c ~/_bin/dot-common/help-functions.sh"
 alias hosts="c ~/_ssh/hosts"
 alias sourcebash="source ~/.bashrc"
 alias sourcezsh="source ~/.zshrc"
-alias sourcebin="source ~/_bin/install.sh"
-alias sourcessh="source ~/_ssh/install.sh"
-alias sourceall="sourcezsh && sourcebin && sourcessh"
+alias installbin="source ~/_bin/install.sh"
+alias installssh="source ~/_ssh/install.sh"
 
 # Colored cat! // install Pygments first - "sudo easy_install Pygments"
 alias c='pygmentize -O style=monokai -f console256 -g'
@@ -101,7 +100,6 @@ alias bcun='brew cask uninstall'
 
 
 ## paths ##
-export PATH="$HOME/.composer/vendor/bin:$PATH"
-#export PATH="$(brew --prefix homebrew/php/php70)/bin:$PATH"
+export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 export NVM_DIR=~/.nvm && source $(brew --prefix nvm)/nvm.sh
 export DOTNET_CLI_TELEMETRY_OPTOUT=1

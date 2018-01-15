@@ -7,7 +7,7 @@ These are scripts I use to setup my mac after a clean install (which I like to d
     - Syntax highlighted 'cat'
     - Faster directory navigation with z.sh
     - Customized bash prompt line (with Git branch status, and customizable symbol ⚡)
-- Customized ***zsh*** with [prezto](https://github.com/sorin-ionescu/prezto)
+- Customized ***zsh*** with oh-my-zsh
 - ```clean_mac_setup()``` function ***(NOTE: xcode command-line tools needed)***
 	- Installs Homebrew and Cask
 	- Installs misc hombrew apps (ack, tmux, git, node, php 5.6, etc.)
@@ -59,9 +59,8 @@ Run individual install commands
     install_default_brew_apps
     install_default_cask_apps
 
-    # pygments, prezto, tmuxifier, etc.
+    # pygments, tmuxifier, etc.
     install_pygments
-    install_prezto
     install_tmuxifier
     install_hushlogin
 
@@ -80,5 +79,5 @@ Run individual install commands
 ####Default Cask Installs
 - [cask.sh](https://github.com/mrlami/dotFiles/blob/master/installs/cask.sh)
 
-####Prezto Steeef Theme Setting (pet peeve)
-- join lines 88 and 89 (on file ~/.zprezto/modules/prompt/functions/prompt_steeef_setup) to prevent additional space on top of terminal with steeef theme
+####oh-my-zsh Steeef Theme Setting (pet peeve)
+- tweak last line `PROMPT=$` to remove extra space on top of prompt

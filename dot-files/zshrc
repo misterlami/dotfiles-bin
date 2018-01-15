@@ -1,16 +1,18 @@
 
-# source
-if [ -d ~/.zprezto ]; then
-    source ~/.zprezto/runcoms/zshrc
-fi
+# Path to your oh-my-zsh installation.
+export ZSH=/Users/aware/.oh-my-zsh
+
+# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+ZSH_THEME="steeef"
+
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(
+  git
+)
+
+# source oh-my-zsh
+source $ZSH/oh-my-zsh.sh
+
+# source aliases & helper functions
 source ~/_bin/dot-common/aliases.sh
-source ~/_bin/dot-common/env-zsh.sh
 source ~/_bin/dot-common/help-functions.sh
-
-# init z - https://github.com/rupa/z
-source ~/_bin/dot-common/z.sh
-
-# additional zsh auto-completions from homebrew
-fpath=(/usr/local/share/zsh-completions $fpath)
-
-#test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"

@@ -28,13 +28,12 @@ brew install vim
 brew install wget
 
 brew install bash
-brew install zsh
-brew install zsh-completions
+brew install zsh zsh-completions
 
 brew install awscli
 brew cask install google-cloud-sdk
-brew install mycli
-brew install pgcli
+# brew install mycli
+# brew install pgcli
 
 brew install go
 brew install nvm
@@ -50,3 +49,13 @@ brew install codeception psysh php-cs-fixer tidy-html5
 
 
 brew cleanup
+
+
+# install oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+ln -sf ~/_bin/dot-files/zshrc ~/.zshrc #zsh
+
+echo "****************************************"
+echo "don't forget to remove extra space      "
+echo "in \"steef theme\" PROMPT=$ (last line) "
+echo "****************************************"
