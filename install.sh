@@ -5,11 +5,11 @@ sudo -v
 
 # setup aliases (-f: remove existing file, -n: don't replace existing symlink)
 echo "Aliasing dotfiles..."
-ln -sf ~/_bin/dot-files/bashrc ~/.bashrc #bash
-ln -sf ~/_bin/dot-files/bash_profile ~/.bash_profile #bash
-ln -sf ~/_bin/dot-files/gitconfig ~/.gitconfig #git
-ln -sf ~/_bin/dot-files/gitignore ~/.gitignore #gitignore
-ln -sf ~/_bin/dot-files/nanorc ~/.nanorc #nano
+ln -sf ~/_bin/dot-files/bashrc ~/.bashrc
+ln -sf ~/_bin/dot-files/bash_profile ~/.bash_profile
+ln -sf ~/_bin/dot-files/gitconfig ~/.gitconfig
+ln -sf ~/_bin/dot-files/gitignore ~/.gitignore
+ln -sf ~/_bin/dot-files/nanorc ~/.nanorc
 
 # source rc file
 echo "Sourcing aliased dotfiles..."

@@ -16,3 +16,6 @@ source $ZSH/oh-my-zsh.sh
 # source aliases & helper functions
 source ~/_bin/dot-common/aliases.sh
 source ~/_bin/dot-common/help-functions.sh
+
+# initialize z - https://github.com/rupa/z
+source ~/_bin/dot-common/z.sh
