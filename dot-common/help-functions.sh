@@ -181,7 +181,7 @@ function install_node_apps() {
 
     #install node apps
     npm install -g speed-test trash-cli empty-trash-cli
-    npm install -g grunt-cli gulp webpack yarn
+    npm install -g gulp webpack
     npm install -g adonis-cli pm2
     npm install -g browser-sync csslint eslint jshint sass-lint
 }

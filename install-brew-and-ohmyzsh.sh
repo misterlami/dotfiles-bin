@@ -31,21 +31,18 @@ brew install bash
 brew install zsh zsh-completions
 
 brew install awscli
-brew cask install google-cloud-sdk
-# brew install mycli
-# brew install pgcli
+brew install azure-cli
+brew install ansible
 
 brew install go
 brew install nvm
 brew install composer
 
-# brew install mysql
-# brew install postgresql
-# brew install rethinkdb
-# brew install redis
+brew install mycli
+brew install pgcli
 
-brew install php70 php70-mcrypt
-brew install codeception psysh php-cs-fixer tidy-html5
+brew install php72
+brew install codeception psysh php-cs-fixer
 
 
 brew cleanup

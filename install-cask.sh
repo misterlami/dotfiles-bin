@@ -19,10 +19,10 @@ brew cask install bartender
 brew cask install caffeine
 brew cask install itsycal
 
-#brew cask install atext
-#brew cask install alfred
+# brew cask install atext
+# brew cask install alfred
 brew cask install moom
-#brew cask install totalfinder
+# brew cask install totalfinder
 
 brew cask install iterm2
 brew cask install keka
@@ -35,9 +35,9 @@ brew cask install wallpaper-wizard
 
 brew cask install cloudup
 brew cask install screenflow
-#brew cask install --appdir="/Applications" snagit
-#brew cask install --appdir="/Applications" camtasia
-#brew cask install --appdir="/Applications" cleanmymac
+# brew cask install --appdir="/Applications" snagit
+# brew cask install --appdir="/Applications" camtasia
+# brew cask install --appdir="/Applications" cleanmymac
 
 # media apps
 brew cask install audacity
@@ -47,41 +47,41 @@ brew cask install vlc
 brew cask install macdown
 
 # cloud & web apps
+brew cask install dropbox
+brew cask install google-chrome
+brew cask install google-backup-and-sync
 brew cask install resilio-sync
-#brew cask install dropbox
-#brew cask install google-chrome
-#brew cask install google-drive
 brew cask install transmission
 
 # communication tools
-#brew cask install hipchat
-#brew cask install skype
-#brew cask install slack
-#brew cask install textual
+brew cask install slack
+brew cask install skype
+brew cask install textual
 
 # devops tools
 brew cask install vmware-fusion
 brew cask install virtualbox
 brew cask install vagrant
 
-#brew cask install cornerstone
-#brew cask install tower
+brew cask install cornerstone
+brew cask install tower
+brew cask install transmit
 
-# brew cask install navicat-premium
-# brew cask install mysqlworkbench
-# brew cask install transmit
+brew cask install navicat-premium
+brew cask install mysqlworkbench
 
 # dev tools
-# brew cask install code
+brew cask install sketch
+brew cask install sublime-text
+brew cask install visual-studio-code
+
 brew cask install coderunner
 brew cask install dash
 brew cask install kaleidoscope
-brew cask install ngrok
 brew cask install postman
-#brew cask install rbtools
 
-#brew cask install sketch
-#brew cask install sublime-text
+brew cask install ngrok
+brew cask install google-cloud-sdk
 
 
 brew cask cleanup
