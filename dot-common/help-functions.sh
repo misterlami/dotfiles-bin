@@ -184,15 +184,25 @@ function install_node_apps() {
     npm install -g gulp webpack
     npm install -g adonis-cli pm2
     npm install -g browser-sync csslint eslint jshint sass-lint
+    npm install -g learnyounode
 }
 
 function install_php_apps() {
-    composer global require "hirak/prestissimo" #parallel install plugin (speeds up composer)
+    composer g require "hirak/prestissimo" #parallel install plugin (speeds up composer)
+    composer g require "psy/psysh:@stable"
+    composer g require "phpmd/phpmd"
+    composer g require "squizlabs/php_codesniffer"
+    composer g require "codeception/codeception"
+    composer g require "laravel/installer"
 
-    composer global require "laravel/installer"
-    composer global require "laravel/envoy=~1.0"
-    composer global require "laravel/homestead"
-    composer global require "laravel/valet"
+    #install phpschool.io
+    if ! type "learnyouphp" > /dev/null; then
+        curl -O https://php-school.github.io/workshop-manager/workshop-manager.phar
+        mv workshop-manager.phar /usr/local/bin/workshop-manager
+        chmod +x /usr/local/bin/workshop-manager
+        workshop-manager verify
+        workshop-manager install learnyouphp
+    fi
 }
 
 function install_tmuxifier() {
@@ -229,19 +239,19 @@ function install_vagrant_plugins() {
     # https://github.com/mitchellh/vagrant/wiki/Available-Vagrant-Plugins
     vagrant plugin install vagrant-reload
     vagrant plugin install vagrant-aws
+    vagrant plugin install vagrant-azure
+    vagrant plugin install vagrant-google
     vagrant plugin install vagrant-digitalocean
-    vagrant plugin install vagrant-linode
     vagrant plugin install vagrant-vultr
 
     #vagrant plugin install vagrant-vmware-fusion
     #vagrant plugin license vagrant-vmware-fusion ~/Dropbox/Apps/_licenses/vagrant-vmware-fusion-license.lic
 
-    echo '--------------------------------------'
-    echo 'you might want to install below boxes:'
-    echo '--------------------------------------'
-    echo 'vagrant box add bento/ubuntu-14.04'
+    echo '---------------------------------------'
+    echo 'you might want to install below boxe(s):'
+    echo '---------------------------------------'
     echo 'vagrant box add laravel/homestead'
-    echo '--------------------------------------'
+    echo '---------------------------------------'
 }
 
 function setup_mac_app_defaults() {
@@ -407,12 +417,7 @@ function setup_mac_app_defaults() {
     defaults write org.m0k.transmission WarningLegal -bool false
 }
 
-#clone a repository and cd into it
-function sgclone() {
-    git clone ssh://l_adabonyan@172.30.204.246:29418/SCBZ/$1.git $2
-}
-
-#start a jenkins build
+#start a jenkins build (scigames)
 function sgbuild() {
     # $1 - delete flag
 
@@ -497,22 +502,4 @@ function sgbuild() {
     echo "url » $URL"
     echo "parameters » $CURL_DATA"
     echo "*********************************"
-}
-
-#request review (ignore app folder)
-function sgreview() {
-    if [ -z "$1" ]; then
-        rbt post --username mrlami -o -g -X '*.ico' -X '*.gif' -X '*.png' -X '*.jpg' -X '*.map' -X '*.min.js' -X '*.min.css' -X '*/app/*.php' -X '*/fonts/*' -X '*/images/*' -X '*/tests/*' -X '*/docs/*' -X '*/vendor/*' -X '*.env'
-    else
-        rbt post -r $1 -o -g -X '*.ico' -X '*.gif' -X '*.png' -X '*.jpg' -X '*.map' -X '*.min.js' -X '*.min.css' -X '*/app/*.php' -X '*/fonts/*' -X '*/images/*' -X '*/tests/*' -X '*/docs/*' -X '*/vendor/*' -X '*.env'
-    fi
-}
-
-#request review (include app folder)
-function sgreview2() {
-    if [ -z "$1" ]; then
-        rbt post --username mrlami -o -g -X '*.ico' -X '*.gif' -X '*.png' -X '*.jpg' -X '*.map' -X '*.min.js' -X '*.min.css' -X '*/fonts/*' -X '*/images/*' -X '*/tests/*' -X '*/docs/*' -X '*/vendor/*' -X '*.env'
-    else
-        rbt post -r $1 -o -g -X '*.ico' -X '*.gif' -X '*.png' -X '*.jpg' -X '*.map' -X '*.min.js' -X '*.min.css' -X '*/fonts/*' -X '*/images/*' -X '*/tests/*' -X '*/docs/*' -X '*/vendor/*' -X '*.env'
-    fi
 }

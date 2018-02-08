@@ -101,7 +101,8 @@ alias bcun='brew cask uninstall'
 
 ## paths ##
 export PATH="/usr/local/sbin:$PATH"
-export PATH="$PATH:/Users/aware/.php-school/bin"
-export NVM_DIR=~/.nvm && source $(brew --prefix nvm)/nvm.sh
+export PATH="$PATH:$HOME/.composer/vendor/bin"
+export PATH="$PATH:$HOME/.php-school/bin"
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
+export NVM_DIR="$HOME/.nvm" && source "/usr/local/opt/nvm/nvm.sh"

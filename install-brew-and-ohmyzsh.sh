@@ -14,35 +14,20 @@ brew upgrade
 
 
 # brew installs
-brew install ack
-brew install gawk
-brew install git
-brew install httpie
-brew install imagemagick
+brew install ack gawk
+brew install git openssl
+brew install httpie wget
+brew install imagemagick tree
 brew install jq #formats json output on command prompt
-brew install nano
-brew install openssl
-brew install tmux
-brew install tree
-brew install vim
-brew install wget
+brew install nano vim
+brew install bash zsh zsh-completions
 
-brew install bash
-brew install zsh zsh-completions
-
-brew install awscli
-brew install azure-cli
-brew install ansible
-
-brew install go
-brew install nvm
-brew install composer
-
-brew install mycli
-brew install pgcli
-
+brew install nvm composer
 brew install php72
-brew install codeception psysh php-cs-fixer
+
+brew install mycli pgcli
+brew install awscli azure-cli ansible
+
 
 
 brew cleanup
