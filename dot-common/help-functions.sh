@@ -175,11 +175,9 @@ function install_default_cask_apps() {
 }
 
 function install_node_apps() {
-    #install latest version of node and set it as default
-    # nvm install node
-    # nvm use node
-    nvm install --lts
-    nvm use --lts
+    #install and latest version of node and set it as default
+    nvm install node
+    nvm alias default node
 
     #install node apps
     npm install -g speed-test trash-cli empty-trash-cli

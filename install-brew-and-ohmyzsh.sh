@@ -29,7 +29,6 @@ brew install mycli pgcli
 brew install awscli azure-cli ansible
 
 
-
 brew cleanup
 
 

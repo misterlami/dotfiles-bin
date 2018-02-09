@@ -34,10 +34,10 @@ brew cask install quicklook-json
 brew cask install wallpaper-wizard
 
 brew cask install cloudup
+brew cask install cleanmymac
+brew cask install snagit
+brew cask install camtasia
 brew cask install screenflow
-# brew cask install --appdir="/Applications" snagit
-# brew cask install --appdir="/Applications" camtasia
-# brew cask install --appdir="/Applications" cleanmymac
 
 # media apps
 brew cask install audacity
