@@ -19,10 +19,11 @@ brew cask install bartender
 brew cask install caffeine
 brew cask install itsycal
 
-# brew cask install atext
-# brew cask install alfred
+brew cask install workflowy
+brew cask install atext
+brew cask install alfred
 brew cask install moom
-# brew cask install totalfinder
+brew cask install totalfinder
 
 brew cask install iterm2
 brew cask install keka
@@ -35,9 +36,9 @@ brew cask install wallpaper-wizard
 
 brew cask install cloudup
 brew cask install cleanmymac
-brew cask install snagit
-brew cask install camtasia
-brew cask install screenflow
+#brew cask install snagit
+#brew cask install camtasia
+#brew cask install screenflow
 
 # media apps
 brew cask install audacity
@@ -48,18 +49,18 @@ brew cask install macdown
 
 # cloud & web apps
 brew cask install dropbox
-brew cask install google-chrome
+#brew cask install google-chrome
 brew cask install google-backup-and-sync
 brew cask install resilio-sync
 brew cask install transmission
 
 # communication tools
 brew cask install slack
-brew cask install skype
+#brew cask install skype
 brew cask install textual
 
 # devops tools
-brew cask install vmware-fusion
+#brew cask install vmware-fusion
 brew cask install virtualbox
 brew cask install vagrant
 
