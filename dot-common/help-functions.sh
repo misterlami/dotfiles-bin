@@ -164,7 +164,7 @@ function install_brew_and_cask() {
 
 function install_default_brew_apps() {
     if check_brew_installation; then
-        source ~/_bin/install-brew.sh
+        source ~/_bin/install-brew-and-ohmyzsh.sh
     fi
 }
 
@@ -181,9 +181,9 @@ function install_node_apps() {
 
     #install node apps
     npm install -g speed-test trash-cli empty-trash-cli
-    npm install -g gulp webpack
+    npm install -g gulp webpack vue-cli
     npm install -g adonis-cli pm2
-    npm install -g browser-sync csslint eslint jshint sass-lint
+    npm install -g jest browser-sync csslint eslint jshint sass-lint
     npm install -g learnyounode
 }
 

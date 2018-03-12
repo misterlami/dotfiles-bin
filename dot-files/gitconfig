@@ -25,8 +25,6 @@
 	untracked = cyan
 [push]
 	default = simple
-[init]
-	templatedir = ~/.git_template
 [filter "lfs"]
 	clean = git lfs clean %f
 	smudge = git lfs smudge %f
