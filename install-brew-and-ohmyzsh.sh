@@ -23,6 +23,7 @@ brew install nano vim
 brew install bash zsh zsh-completions
 
 brew install nvm composer
+brew install yarn --without-node
 brew install php72 python python3
 
 brew install mycli pgcli

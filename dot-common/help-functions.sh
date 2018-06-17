@@ -25,13 +25,58 @@ function enter() {
     cd $1
 }
 
+#!/bin/bash
+
+function enter() {
+    mkdir $1
+    cd $1
+}
+
 function copy_ssh_key() {
-    #where $1 is something like root@ip-address or lami@hostname
+    USER=$1
+    HOST=$2
+
+    if [ -z "$1" ] || [ -z "$2" ]; then
+        echo "ERROR: requires two parameters: 1 - user, 2-host"
+        echo "1. user (e.g. ubuntu) "
+        echo "2. host (e.g. 10.0.0.1 or opsman.example.org) "
+        return 1
+    fi
+
+    echo "** attempting to connect to $USER@$HOST to add your key as a known host **"
     cat ~/.ssh/id_rsa.pub | ssh $1 "mkdir -p ~/.ssh && cat >>  ~/.ssh/authorized_keys"
+}
+
+function generate_new_ssh_key(){
+    USER=$1
+    HOST=$2
+
+    if [ -z "$1" ] || [ -z "$2" ]; then
+        echo "ERROR: requires two parameters: 1 - user, 2-host"
+        echo "1. user (e.g. ubuntu) "
+        echo "2. host (e.g. 10.0.0.1 or opsman.example.org) "
+        return 1
+    fi
+
+    ssh-keygen -t ECDSA -N '' -C $HOST -f ~/_ssh/keys/$HOST
+
+    echo "** attempting to connect to $USER@$HOST to add your key as a known host **"
+    cat ~/_ssh/keys/$HOST.pub | ssh $USER@$HOST "mkdir -p ~/.ssh && cat >>  ~/.ssh/authorized_keys"
 }
 
 function recursively_delete_files_ending_with() {
     find . -name "*$1" -type f -delete
+}
+
+function find_large_files_in_current_directory() {
+    COUNT=5
+
+    if ! [ -z "$1" ]; then
+        COUNT=$1
+    fi
+    echo "finding large files using 'du -a | sort -n -r | head -n $COUNT'"
+    echo "** note: you can pass a parameter specifying different count **"
+    du -a | sort -n -r | head -n $COUNT
 }
 
 function rename_git_branch() {
@@ -41,6 +86,7 @@ function rename_git_branch() {
     git push origin :$1 $2  #delete old remote branch and push new local branch
     git push origin -u $2   #reset upstream branch to new local branch
 }
+
 
 function setup_dropbox_app_backups() {
     # Bartender

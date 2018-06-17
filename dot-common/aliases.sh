@@ -34,6 +34,7 @@ alias rmd="rm -rf" #delete directory
 alias rdel="recursively_delete_files_ending_with"
 alias renamelower='for f in *; do mv "$f" "`echo $f | tr "[:upper:]" "[:lower:]"`"; done'
 alias renameupper='for f in *; do mv "$f" "`echo $f | tr "[:lower:]" "[:upper:]"`"; done'
+alias findlargefiles='find_large_files_in_current_directory'
 alias serve="php -S localhost:8000" # use -t to specify different doc root
 alias subl='open -a "Sublime Text"'
 alias updatehosts="sudo bash -c 'cat ~/_ssh/hosts > /private/etc/hosts'"
