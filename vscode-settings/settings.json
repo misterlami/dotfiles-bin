@@ -1,0 +1,155 @@
+{
+    /**
+    * Miscellany (moi)
+    **/
+    "explorer.confirmDragAndDrop": false,
+    "files.autoSave": "onFocusChange",
+    "update.showReleaseNotes": false,
+    "workbench.colorTheme": "Tokyo Night Light", //Default Light Modern, Mariana, New Moon, Tokyo Night Light
+    "workbench.iconTheme": "symbols",
+
+    /**
+    * Better Defaults
+    **/
+    "diffEditor.ignoreTrimWhitespace": false,
+    "diffEditor.renderSideBySide": false,
+    "editor.copyWithSyntaxHighlighting": false,
+    "editor.detectIndentation": false,
+    "editor.emptySelectionClipboard": false,
+    "editor.guides.indentation": false,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.snippetSuggestions": "top",
+    "editor.stickyScroll.enabled": false,
+    "editor.wordWrap": "off",
+    "explorer.confirmDelete": false,
+    "extensions.ignoreRecommendations": true,
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+    "window.confirmSaveUntitledWorkspace": false,
+    "window.newWindowDimensions": "offset",
+    "workbench.editor.enablePreview": false,
+
+    /**
+    * Hide Everything
+    **/
+    "workbench.activityBar.location": "top",
+    "workbench.editor.showTabs": "multiple", //single ⋮ multiple ⋮ none
+    "workbench.sideBar.location": "right",
+    "workbench.statusBar.visible": true,
+    "editor.minimap.enabled": false,
+    "editor.lineNumbers": "on",
+
+    /**
+    * Silence The Noise
+    */
+    "breadcrumbs.enabled": true,
+    "scm.diffDecorations": "none",
+    "editor.hover.enabled": "off",
+    "editor.matchBrackets": "never",
+    "workbench.tips.enabled": false,
+    "editor.colorDecorators": false,
+    "git.decorations.enabled": false,
+    "workbench.startupEditor": "none",
+    "editor.lightbulb.enabled": "off",
+    "editor.selectionHighlight": false,
+    "editor.overviewRulerBorder": false,
+    "editor.renderLineHighlight": "none", //none ⋮ gutter ⋮ all
+    "editor.foldingHighlight": false,
+    "editor.occurrencesHighlight": "off",
+    "problems.decorations.enabled": false,
+    "editor.renderControlCharacters": false,
+    "editor.hideCursorInOverviewRuler": true,
+    "editor.gotoLocation.multipleReferences": "goto",
+    "editor.gotoLocation.multipleDefinitions": "goto",
+    "editor.gotoLocation.multipleDeclarations": "goto",
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+    "editor.gotoLocation.multipleImplementations": "goto",
+    "editor.gotoLocation.multipleTypeDefinitions": "goto",
+
+    /**
+    * Typography
+    **/
+    "editor.fontFamily": "geist mono",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 15,
+    "editor.lineHeight": 0,
+    "editor.suggestFontSize": 15,
+    "editor.suggestLineHeight": 28,
+    "terminal.integrated.fontFamily": "geist mono",
+    "terminal.integrated.fontSize": 15,
+    "terminal.integrated.lineHeight": 1.25,
+
+    /**
+    * Find
+    **/
+    "search.useIgnoreFiles": false,
+    "search.exclude": {
+        "**/vendor": true,
+        "**/public": true,
+        "**/composer.lock": true,
+        "storage": true,
+        ".phpunit.result.cache": true,
+        "**/node_modules": true,
+        "**/package-lock.json": true,
+        "**/dist": true,
+        "**/.venv": true,
+        "**/uv.lock": true,
+    },
+
+    /**
+    * Code
+    **/
+    "emmet.includeLanguages": {
+        "blade": "html",
+        "twig": "html",
+        "svelte": "html",
+        "javascript": "javascriptreact",
+        "typescript": "typescriptreact"
+    },
+    "files.associations": {
+        ".php_cs": "php",
+        "*.css": "tailwindcss",
+        "*.toml": "toml"
+    },
+
+    /**
+    * Language formatting
+    **/
+    "prettier.requireConfig": false,
+    "prettier.configPath": "~/.prettierrc",
+    "fiveServer.php.executable": "/opt/homebrew/bin/php",
+
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true
+    },
+    "[css]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true
+    },
+
+    "[php]": {
+        "editor.defaultFormatter": "open-southeners.laravel-pint",
+        "editor.formatOnSave": true
+    },
+    "laravel-pint.enable": true,
+    "php.suggest.basic": false,
+
+    "[markdown]": {
+        "editor.defaultFormatter": "yzhang.markdown-all-in-one",
+        "editor.formatOnSave": true,
+        "editor.wordWrap": "off"
+    },
+
+    /**
+    * Miscellany
+    **/
+    "chat.mcp.gallery.enabled": true,
+    "chat.viewSessions.orientation": "stacked",
+    "kilo-code.new.browserAutomation.headless": true,
+}
