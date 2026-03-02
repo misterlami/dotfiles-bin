@@ -15,6 +15,6 @@
     - Run `list_all_installs` to see each installation.
 
 ## Miscellany
-- View list of all [apps installed by homebrew](https://github.com/misterlami/dotfiles-bin/blob/master/install-brew.sh)
+- View list of [apps installed using homebrew](https://github.com/misterlami/dotfiles-bin/blob/main/install-brew.sh)
 
 - Pet peeve: Run `fix_steeef_ohmyzsh_theme` to remove newline before prompt on Steeef oh-my-zsh theme
