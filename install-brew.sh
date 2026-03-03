@@ -20,12 +20,12 @@ brew install hugo netlify-cli
 brew install raycast workflowy warp iterm2
 brew install snagit camtasia
 brew install bartender forklift
-brew install appcleaner elmedia-player imageoptim itsycal keka namechanger kid3
+brew install appcleaner elmedia-player imageoptim itsycal keka kid3 namechanger
 brew install displaylink flux-app
 brew install google-drive
 
 # web
-brew install google-chrome@dev opera #thebrowsercompany-dia
+brew install google-chrome@dev opera
 brew install microsoft-teams whatsapp zoom
 brew install cloudflare-warp tunnelbear
 
@@ -37,6 +37,7 @@ brew install navicat-premium dbeaver-enterprise
 brew install transmit
 
 # dev tools
+brew install protonpass/tap/protonpass
 brew install codex kimi-cli kilo-org/tap/kilo #codex-app
 brew install visual-studio-code windsurf #sublime-text
 brew install bruno #sublime-merge
