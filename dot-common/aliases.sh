@@ -25,10 +25,11 @@ alias which="which " # enables aliases to be which'ed
 alias cl="clear"
 alias clhist="history -c && rm ~/.zsh_history && exec zsh"
 alias cpd="cp -aR" # copy directory
+alias rmd="rm -rf" # delete directory
+alias purge="sudo purge"
 alias ip="ifconfig | grep 'inet ' | awk '{print $2}'"
 alias ip2="curl ifconfig.co"
 alias p="ping -c 3"
-alias rmd="rm -rf" # delete directory
 alias updatehosts="sudo bash -c 'cat ~/_ssh/hosts > /private/etc/hosts'"
 alias aliases="cc ~/_bin/dot-common/aliases.sh"
 alias functionz="cc ~/_bin/dot-common/help-functions.sh"
@@ -70,6 +71,7 @@ alias bs="brew search"
 alias bi="brew install"
 alias bu="brew uninstall"
 alias bcl="brew update && brew upgrade && brew cleanup prune=all"
+alias bls="brew list | rg"
 
 # git
 alias g="git"
@@ -83,8 +85,8 @@ alias gpl="git pull"
 alias gcl="git clone"
 alias gco="git checkout"
 alias grh="g reset --hard"
-alias gl="git log --oneline --decorate --graph -5" # (show commit messages)
-alias gl2="git log --oneline --decorate --graph --name-only -5" # (show commit messages and files changed)
+alias gl="git log --oneline --decorate --graph -8" # (show commit messages)
+alias gl2="git log --oneline --decorate --graph --name-only -8" # (show commit messages and files changed)
 alias gl3="git shortlog -s -n -e" # show contributors and their total # of commits
 alias gl4="git log --graph -10 --branches --remotes --tags --format=format:'%Cgreen%h %Creset• %<(60,trunc)%s (%cN, %cr) %Cred%d' --date-order" #whos been working on last 10 commits (basically who's working on what now)
 
@@ -98,7 +100,9 @@ alias docker-compose="podman-compose"
 
 # miscellany
 alias vul=vultr
+alias osa=osaurus
 
-## paths ##
+## paths
+export PATH="$HOME/.cargo/bin:$PATH" # rust
 export PATH="$HOME/.composer/vendor/bin:$PATH" # composer
 export NVM_DIR="$HOME/.nvm" && source "$(brew --prefix)/opt/nvm/nvm.sh" && source "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm" # nvm

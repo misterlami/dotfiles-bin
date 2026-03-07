@@ -4,11 +4,12 @@ brew analytics off
 brew update && brew upgrade && brew cleanup
 
 # utilities (terminal)
-brew install bat eza fzf gh git git-lfs git-delta micro screen teleport
-brew install fd ripgrep ast-grep jq universal-ctags
-brew install btop gdu httpie wget
+brew install bat eza fd fzf gh git git-lfs git-delta teleport
+brew install curl httpie wget ripgrep ast-grep jq universal-ctags
+brew install btop gdu lazygit micro yazi
 brew install zoxide zsh zsh-autosuggestions zsh-syntax-highlighting
 brew install ffmpeg pandoc yt-dlp
+brew install protonpass/tap/protonpass
 
 # REPLs, dependency managers, fonts
 brew install psysh ptpython
@@ -37,10 +38,9 @@ brew install navicat-premium dbeaver-enterprise
 brew install transmit
 
 # dev tools
-brew install protonpass/tap/protonpass
-brew install codex kimi-cli kilo-org/tap/kilo #codex-app
-brew install visual-studio-code windsurf #sublime-text
-brew install bruno #sublime-merge
+brew install codex-app brunohttpie-desktop
+brew install codex kilo-org/tap/kilo
+brew install visual-studio-code windsurf
 brew install dotnet-sdk temurin@21
 
 # devops tools
@@ -49,8 +49,8 @@ brew install podman podman-compose podman-desktop
 #colima docker docker-compose docker-desktop
 
 # AI tools
-brew install ollama
-brew install superwhisper
+brew install ollama osaurus
+brew install wispr-flow superwhisper
 
 # installs & settings
 git lfs install
@@ -59,6 +59,10 @@ npm install -g five-server @fission-ai/openspec@latest
 composer global require laravel/installer laravel/pint
 brew link python@3.14 --overwrite --force
 brew services start ollama && ollama pull deepseek-r1:8b
+
+# tryouts
+brew install rust
+cargo install laramux
 
 # cleanup
 brew cleanup --prune=all

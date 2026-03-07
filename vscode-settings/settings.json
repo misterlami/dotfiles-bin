@@ -1,6 +1,6 @@
 {
     /**
-    * Miscellany (moi)
+    * Miscellany
     **/
     "explorer.confirmDragAndDrop": false,
     "files.autoSave": "onFocusChange",
@@ -9,10 +9,21 @@
     "workbench.iconTheme": "symbols",
 
     /**
+    * Make gutter show subtle diffs
+    **/
+    "scm.diffDecorations": "gutter",
+    "workbench.colorCustomizations": {
+        "editorGutter.addedBackground": "#4ade8055",
+        "editorGutter.modifiedBackground": "#60a5fa55",
+        "editorGutter.deletedBackground": "#f8717155"
+    },
+
+    /**
     * Better Defaults
     **/
     "diffEditor.ignoreTrimWhitespace": false,
     "diffEditor.renderSideBySide": false,
+    "editor.accessibilitySupport": "off",
     "editor.copyWithSyntaxHighlighting": false,
     "editor.detectIndentation": false,
     "editor.emptySelectionClipboard": false,
@@ -65,13 +76,6 @@
     "workbench.editor.enablePreviewFromQuickOpen": false,
     "editor.gotoLocation.multipleImplementations": "goto",
     "editor.gotoLocation.multipleTypeDefinitions": "goto",
-
-    "scm.diffDecorations": "gutter", //none ⋮ gutter
-    "workbench.colorCustomizations": {
-        "editorGutter.addedBackground": "#4ade8055",
-        "editorGutter.modifiedBackground": "#60a5fa55",
-        "editorGutter.deletedBackground": "#f8717155"
-    },
 
     /**
     * Typography
@@ -157,5 +161,8 @@
     **/
     "chat.mcp.gallery.enabled": true,
     "chat.viewSessions.orientation": "stacked",
-    "kilo-code.new.browserAutomation.headless": true
+    "kilo-code.new.autocomplete.enableAutoTrigger": false,
+    "kilo-code.new.browserAutomation.headless": true,
+    "kilo-code.new.browserAutomation.enabled": true,
+    "markdown-preview-enhanced.enablePreviewZenMode": true
 }
