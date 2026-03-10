@@ -5,7 +5,7 @@
     "explorer.confirmDragAndDrop": false,
     "files.autoSave": "onFocusChange",
     "update.showReleaseNotes": false,
-    "workbench.colorTheme": "Tokyo Night Light", //Default Light Modern, Mariana, New Moon, Tokyo Night Light
+    "workbench.colorTheme": "Tokyo Night Light", //Tokyo Night Light, Default Light Modern, New Moon, Mariana
     "workbench.iconTheme": "symbols",
 
     /**
@@ -13,9 +13,9 @@
     **/
     "scm.diffDecorations": "gutter",
     "workbench.colorCustomizations": {
-        "editorGutter.addedBackground": "#4ade8055",
-        "editorGutter.modifiedBackground": "#60a5fa55",
-        "editorGutter.deletedBackground": "#f8717155"
+        "editorGutter.addedBackground": "#4ade8066",
+        "editorGutter.modifiedBackground": "#93c5fd99",
+        "editorGutter.deletedBackground": "#f8717199"
     },
 
     /**
@@ -163,6 +163,5 @@
     "chat.viewSessions.orientation": "stacked",
     "kilo-code.new.autocomplete.enableAutoTrigger": false,
     "kilo-code.new.browserAutomation.headless": true,
-    "kilo-code.new.browserAutomation.enabled": true,
-    "markdown-preview-enhanced.enablePreviewZenMode": true
+    "kilo-code.new.browserAutomation.enabled": true
 }

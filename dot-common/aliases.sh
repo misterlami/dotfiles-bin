@@ -22,31 +22,30 @@ alias hc="cd ~/Downloads/code"
 # misc helpful commands
 alias sudo="sudo " # enables aliases to be sudo'ed
 alias which="which " # enables aliases to be which'ed
-alias cl="clear"
-alias clhist="history -c && rm ~/.zsh_history && exec zsh"
+alias cls="clear"
+alias clh="history -c && rm ~/.zsh_history && exec zsh"
 alias cpd="cp -aR" # copy directory
 alias rmd="rm -rf" # delete directory
-alias purge="sudo purge"
 alias ip="ifconfig | grep 'inet ' | awk '{print $2}'"
 alias ip2="curl ifconfig.co"
 alias p="ping -c 3"
 alias updatehosts="sudo bash -c 'cat ~/_ssh/hosts > /private/etc/hosts'"
 alias aliases="cc ~/_bin/dot-common/aliases.sh"
 alias functionz="cc ~/_bin/dot-common/help-functions.sh"
-alias sourcebash="source ~/.bashrc"
 alias sourcezsh="source ~/.zshrc"
 
 alias c="bat --theme=1337" # enhanced cat
-alias cc="bat --theme=1337 --style=plain --paging=never" # enhanced cat
+alias cc="bat --theme=1337 --style=plain --paging=never"
 alias f="fd" # enhanced find
-alias gdu="gdu-go"
-alias pass="pass-cli"
-alias serve="php -S localhost:8000" # use -t to specify different doc root
+alias serve="php -S localhost:8000"
 alias fserve="five-server --php='/opt/homebrew/bin/php'"
 alias hserve="hugo server -D -p 9000"
+
+alias gdu="gdu-go"
+alias pass="pass-cli"
 alias ytd="yt-dlp -f 'bestvideo+bestaudio' --merge-output-format mp4"
 
-function enter() { mkdir $1 && cd $1 }
+function enter() { mkdir -p "$1" && cd "$1" }
 function hugo-post() { hugo new "posts/$1.md" }
 
 # apps
@@ -105,4 +104,5 @@ alias osa=osaurus
 ## paths
 export PATH="$HOME/.cargo/bin:$PATH" # rust
 export PATH="$HOME/.composer/vendor/bin:$PATH" # composer
+export PATH="$(brew --prefix python)/libexec/bin:$(brew --prefix)/bin:$PATH" # python
 export NVM_DIR="$HOME/.nvm" && source "$(brew --prefix)/opt/nvm/nvm.sh" && source "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm" # nvm
