@@ -28,7 +28,7 @@ alias cpd="cp -aR" # copy directory
 alias rmd="rm -rf" # delete directory
 alias ip="ifconfig | grep 'inet ' | awk '{print $2}'"
 alias ip2="curl ifconfig.co"
-alias p="ping -c 3"
+alias pg="ping -c 3"
 alias updatehosts="sudo bash -c 'cat ~/_ssh/hosts > /private/etc/hosts'"
 alias aliases="cc ~/_bin/dot-common/aliases.sh"
 alias functionz="cc ~/_bin/dot-common/help-functions.sh"
@@ -49,8 +49,8 @@ function enter() { mkdir -p "$1" && cd "$1" }
 function hugo-post() { hugo new "posts/$1.md" }
 
 # apps
-alias make_forklift_default_finder="defaults write -g NSFileViewer -string com.binarynights.ForkLift && defaults write com.apple.LaunchServices/com.apple.launchservices.secure LSHandlers -array-add '{LSHandlerContentType="public.folder";LSHandlerRoleAll="com.binarynights.ForkLift";}'"
-alias unmake_forklift_default_finder="defaults delete -g NSFileViewer && defaults write com.apple.LaunchServices/com.apple.launchservices.secure LSHandlers  -array-add '{LSHandlerContentType="public.folder";LSHandlerRoleAll="com.apple.finder";}'"
+alias make_bloom_default_finder='defaults write -g NSFileViewer -string com.asiafu.Bloom; defaults write com.apple.LaunchServices/com.apple.launchservices.secure LSHandlers -array-add "{LSHandlerContentType=\"public.folder\";LSHandlerRoleAll=\"com.asiafu.Bloom\";}"; echo "Restart macOS for changes to take effect."'
+alias unmake_bloom_default_finder='defaults delete -g NSFileViewer; defaults write com.apple.LaunchServices/com.apple.launchservices.secure LSHandlers -array-add "{LSHandlerContentType=\"public.folder\";LSHandlerRoleAll=\"com.apple.finder\";}"; echo "Restart macOS to restore Finder behavior."'
 
 # repls
 alias py="ptpython"
@@ -69,7 +69,8 @@ alias b="brew"
 alias bs="brew search"
 alias bi="brew install"
 alias bu="brew uninstall"
-alias bcl="brew update && brew upgrade && brew cleanup prune=all"
+alias bcl="brew update && brew upgrade"
+alias bcla="brew cleanup prune=all"
 alias bls="brew list | rg"
 
 # git

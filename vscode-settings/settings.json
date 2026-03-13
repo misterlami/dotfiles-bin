@@ -5,7 +5,7 @@
     "explorer.confirmDragAndDrop": false,
     "files.autoSave": "onFocusChange",
     "update.showReleaseNotes": false,
-    "workbench.colorTheme": "Tokyo Night Light", //Tokyo Night Light, Default Light Modern, New Moon, Mariana
+    "workbench.colorTheme": "Tokyo Night Light", //Tokyo Night Light, Monokai Classic
     "workbench.iconTheme": "symbols",
 
     /**
