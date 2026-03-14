@@ -1,0 +1,24 @@
+{
+  "$schema": "https://kilo.ai/config.json",
+  "enabled_providers": [
+      "amazon-bedrock",
+      "google",
+      "kilo",
+      "openai"
+  ],
+  "model": "kilo/anthropic/claude-sonnet-4.6",
+  "small_model": "kilo/kilo-auto/free",
+  "default_agent": "ask",
+  "agent": {
+    "ask": {
+    },
+    "code": {
+    },
+    "plan": {
+    },
+    "debug": {
+    },
+    "orchestrator": {
+    }
+  }
+}
